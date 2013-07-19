@@ -1,0 +1,17 @@
+[
+{
+  "modid": "tmt",
+  "name": "Too Many Tools",
+  "description": "Like the title says Too Many Tools! ",
+  "version": "1.0.0",
+  "mcversion": "1.6.2",
+  "logoFile": "/MoreFoodLogo.png",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["Dogking190"],
+  "credits": "Made by Dogking190",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
