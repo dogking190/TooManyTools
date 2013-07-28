@@ -10,6 +10,7 @@ package dogking190.tmt.Ore;
 
 import dogking190.lib.Modinfo;
 import dogking190.lib.Names;
+import dogking190.tmt.tmt;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -23,7 +24,7 @@ public class OrePlatinum extends Block{
 		setResistance(6.0F);		
 		setStepSound(Block.soundStoneFootstep);
 		setUnlocalizedName(Names.orePlatinum_UnlocalizedName);
-		setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(tmt.tabTooManytools);
 		func_111022_d(Modinfo.ID.toLowerCase() + ":" + Names.orePlatinum_UnlocalizedName);
 	}
 

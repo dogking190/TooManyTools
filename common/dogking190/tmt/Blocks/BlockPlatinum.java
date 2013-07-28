@@ -12,6 +12,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import dogking190.lib.Modinfo;
 import dogking190.lib.Names;
+import dogking190.tmt.tmt;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -25,7 +26,7 @@ public class BlockPlatinum extends Block
             super(par1, par2Material);
             this.setHardness(5.0F);
             this.setResistance(5.0F);
-            this.setCreativeTab(CreativeTabs.tabBlock);
+            this.setCreativeTab(tmt.tabTooManytools);
             this.setUnlocalizedName(Names.blockPlatinum_UnlocalizedName);
             this.func_111022_d(Modinfo.ID.toLowerCase() +":" + Names.blockPlatinum_UnlocalizedName);
 

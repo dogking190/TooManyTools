@@ -8,11 +8,15 @@
  */
 package dogking190.tmt.Ore;
 
-import dogking190.lib.Modinfo;
-import dogking190.lib.Names;
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import dogking190.lib.Modinfo;
+import dogking190.lib.Names;
+import dogking190.tmt.tmt;
+import dogking190.tmt.items.Items;
 
 public class OreSapphire extends Block
     {
@@ -21,11 +25,15 @@ public class OreSapphire extends Block
         {
             super(par1, par2Material);
             
-            this.setCreativeTab(CreativeTabs.tabBlock);
+            this.setCreativeTab(tmt.tabTooManytools);
             this.setUnlocalizedName(Names.oreSapphire_UnlocalizedName);
             this.setResistance(5.0F);
             this.setHardness(5.0F);
             this.func_111022_d(Modinfo.ID.toLowerCase() +":" + Names.oreSapphire_UnlocalizedName);
         }
+    
+    public int idDropped(int par1, Random random, int zero) {
+        return Items.gemSapphire.itemID;
+}
 
     }

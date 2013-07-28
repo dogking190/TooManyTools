@@ -51,7 +51,7 @@ public class BlocksOre{
     	
 		//Minecraft Harvest
 		MinecraftForge.setBlockHarvestLevel(orePlatinum,"pickaxe", 1);
-    	MinecraftForge.setBlockHarvestLevel(genericOre, "pickaxe", 3);
+    	MinecraftForge.setBlockHarvestLevel(genericOre, "pickaxe", 4);
     	MinecraftForge.setBlockHarvestLevel(oreRuby, "Pickaxe", 2);
     	MinecraftForge.setBlockHarvestLevel(oreCopper, "pickaxe", 1);
     	MinecraftForge.setBlockHarvestLevel(oreTin, "pickaxe", 1);

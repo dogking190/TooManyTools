@@ -10,7 +10,7 @@ package dogking190.lib;
 
 public class Names {
 	
-	//Items
+	/** Items */
 	public static final String ingotPlatinum_UnlocalizedName = "ingotPlatinum";
 	public static final String ingotPlatinum_Name = "Platinum Ingot";
 	
@@ -26,7 +26,24 @@ public class Names {
 	public static final String ingotCopper_UnlocalizedName = "ingotCopper";
 	public static final String ignotCopper_Name = "Copper Ingot";
 	
-	//Ores
+	public static final String gemSapphire_UnlocalizedName = "gemSapphire";
+	public static final String gemSapphire_Name = "Sapphire Gem";
+	
+	public static final String ingotSapphire_UnlocalizedName = "ingotSapphire";
+	public static final String ingotSapphire_Name = "Sapphire Ingot";
+	
+	public static final String ingotTin_UnloclalizedName = "ingotTin";
+	public static final String ingotTin_Name = "Tin Ingot";
+	
+	public static final String ingotChrome_UnlocalizedName = "ingotChrome";
+	public static final String ingotChrome_Name = "Chromite Ingot";
+	
+	public static final String ingotZinc_UnlocalizedNAme = "ingotZinc";
+	public static final String ingotZinc_Name = "Zinc Ingot";
+	
+	
+	
+	/** Ores */
 	public static final String orePlatinum_UnlocalizedName = "orePlatinum";
 	public static final String orePlatinum_Name = "Platinum Ore";
 	
@@ -50,8 +67,137 @@ public class Names {
     
     public static final String oreSapphire_UnlocalizedName = "oreSapphire";
     public static final String oreSapphire_Name = "Sapphire Ore";
+    
+    /** Titanium Tools */
+    public static final String spadeTitanium_UnlocalizedName = "spadeTitanium";
+    public static final String spadeTitanium_Name = "Titanium Spade";
+    
+    public static final String pickaxeTitanium_UnlocalizedName = "pickaxeTitanium";
+    public static final String pickaxeTitanium_Name = "Titanium Pickaxe";
+    
+    public static final String swordTitanium_UnlocalizedName = "swordTitanium";
+    public static final String swordTitanium_Name = "Titanium Sword";
+    
+    public static final String axeTitanium_UnlocalizedName = "axeTitanium";
+    public static final String axeTitanium_Name = "Titanium Axe";
+    
+    public static final String hoeTitanium_UnlocalizedName = "hoeTitanium";
+    public static final String hoeTitanium_Name = "Titanium Hoe";
+    
+    /** Platinum Tools */
+    public static final String PlatinumSword_UnlocalizedName = "swordPlatinum";
+    public static final String PlatinumSword_Name = "Platinum Sword";
+    
+    public static final String pickaxePlatinum_UnlocalizedName = "pickaxePlatinum";
+    public static final String pickaxePlatinum_Name = "Platinum Pickaxe";
+    
+    public static final String axePlatinum_UnlocalizedName = "axePlatinum";
+    public static final String axePlatinum_Name = "Platinum Axe";
+    
+    public static final String spadePlatinum_UnlocalizedName = "spadePlatinum";
+    public static final String spadePlatinum_Name = "Platinum Spade";
+    
+    public static final String hoePlatinum_UnlocalizedName = "hoePlatinum";
+    public static final String hoePlatinum_Name = "Platinum Hoe";
+    
+    /** Sapphire Tools */
+    public static final String swordSapphire_UnlocalizedName = "swordSapphire";
+    public static final String swordSapphire_Name = "Sapphire Sword";
+    
+    public static final String pickaxeSapphire_UnlocalizedName = "pickaxeSapphire";
+    public static final String pickaxeSapphire_Name = "Sapphire Pickaxe";
+    
+    public static final String axeSapphire_UnlocalizedName = "axeSapphire";
+    public static final String axeSapphire_Name = "Sapphire Axe";
+    
+    public static final String spadeSapphire_UnlocalizedName = "spadeSapphire";
+    public static final String spadeSapphire_Name = "Sapphire Spade";
+    
+    public static final String hoeSapphire_UnlocalizedName = "hoeSapphire";
+    public static final String hoeSapphire_Name = "Sapphire Hoe";
+    
+    /** Copper Tools */
+    public static final String swordCopper_UnlocalizedName = "swordCopper";
+    public static final String swordCopper_Name = "Copper Sword";
+    
+    public static final String pickaxeCopper_UnlocalizedName = "pickaxeCopper";
+    public static final String pickaxeCopper_Name = "Copper Pickaxe";
+    
+    public static final String axeCopper_UnlocalizedName = "axeCopper";
+    public static final String axeCopper_Name = "Copper Axe";
+    
+    public static final String spadeCopper_UnlocalizedName = "spadeCopper";
+    public static final String spadeCopper_Name = "Copper Spade";
+    
+    public static final String hoeCopper_UnlocalizedName = "hoeCopper";
+    public static final String hoeCopper_Name = "Copper Hoe";
+    
+    /** Zinc Tools */
+    public static final String swordZinc_UnlocalizedName = "swordZinc";
+    public static final String swordZinc_Name = "Zinc Sword";
+    
+    public static final String pickaxeZinc_UnlocalizedName = "pickaxeZinc";
+    public static final String pickaxeZinc_Name = "Zinc Pickaxe";
+    
+    public static final String axeZinc_UnlocalizedName = "axeZinc";
+    public static final String axeZinc_Name = "Zinc Axe";
+    
+    public static final String spadeZinc_UnlocalizedName = "spadeZinc";
+    public static final String spadeZinc_Name = "Zinc Spade";
+    
+    public static final String hoeZinc_UnlocalizedName = "hoeZinc";
+    public static final String hoeZinc_Name = "Zinc Hoe";
+    
+    /** Tin Tools */
+    public static final String swordTin_UnlocalizedName = "swordTin";
+    public static final String swordTin_Name = "Tin Sword";
+    
+    public static final String pickaxeTin_UnlocalizedName = "pickaxeTin";
+    public static final String pickaxeTin_Name = "Tin Pickaxe";
+    
+    public static final String axeTin_UnlocalizedName = "axeTin";
+    public static final String axeTin_Name = "Tin Axe";
+    
+    public static final String spadeTin_UnlocalizedName = "spadeTin";
+    public static final String spadeTin_Name = "Tin Spade";
+    
+    public static final String hoeTin_UnlocalizedName = "hoeTin";
+    public static final String hoeTin_Name = "Tin Hoe";
+    
+    /** Ruby Tools */
+    public static final String swordRuby_UnlocalizedName = "swordRuby";
+    public static final String swordRuby_Name = "Ruby Sword";
+    
+    public static final String pickaxeRuby_UnlocalizedName = "pickaxeRuby";
+    public static final String pickaxeRuby_Name = "Ruby Pickaxe";
+    
+    public static final String axeRuby_UnlocalizedName = "axeRuby";
+    public static final String axeRuby_Name = "Ruby Axe";
+    
+    public static final String spadeRuby_UnlocalizedName = "spadeRuby";
+    public static final String spadeRuby_Name = "Ruby Spade";
+    
+    public static final String hoeRuby_UnlocalizedName = "hoeRuby";
+    public static final String hoeRuby_Name = "Ruby Hoe";
+    
+    /** Chrome Tools */
+    public static final String swordChrome_UnlocalizedName = "swordChrome";
+    public static final String swordChrome_Name = "Chrome Sword";
+    
+    public static final String pickaxeChrome_UnlocalizedName = "pickaxeChrome";
+    public static final String pickaxeChrome_Name = "Chrome Pickaxe";
+    
+    public static final String axeChrome_UnlocalizedName = "axeChrome";
+    public static final String axeChrome_Name = "Chrome Axe";
+    
+    public static final String spadeChrome_UnlocalizedName = "spadeChrome";
+    public static final String spadeChrome_Name = "Chrome Spade";
+    
+    public static final String hoeChrome_UnlocalizedName = "hoeChrome";
+    public static final String hoeChrome_Name = "Chrome Hoe";
+    
 	
-	//Blocks
+	/** Blocks */
 	public static final String blockPlatinum_UnlocalizedName = "blockPlatinum";
 	public static final String blockPlatinum_Name = "Platinum Block";
 

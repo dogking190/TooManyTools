@@ -12,6 +12,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import dogking190.lib.Modinfo;
 import dogking190.lib.Names;
+import dogking190.tmt.tmt;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -22,7 +23,7 @@ public class IngotCopper extends Item
     public IngotCopper(int par1)
         {
             super(par1);
-             this.setCreativeTab(CreativeTabs.tabMisc);
+            this.setCreativeTab(tmt.tabTooManytools);
              this.setUnlocalizedName(Names.ingotCopper_UnlocalizedName);
         }
     

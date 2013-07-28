@@ -16,6 +16,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import dogking190.lib.Modinfo;
 import dogking190.lib.Names;
+import dogking190.tmt.tmt;
 
 public class OreCopper extends Block
     {
@@ -24,7 +25,7 @@ public class OreCopper extends Block
         {
             super(par1, par2Material);
             
-            this.setCreativeTab(CreativeTabs.tabBlock);
+            this.setCreativeTab(tmt.tabTooManytools);
             this.setUnlocalizedName(Names.oreCopper_UnlocalizedName);
             this.setResistance(8.0F);
             this.setHardness(8.0F);

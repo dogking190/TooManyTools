@@ -22,8 +22,14 @@ public class Items
 	public static Item ingotRuby;
 	public static Item ingotTitanium;
 	public static Item ingotCopper;
+	public static Item ingotSapphire;
+	public static Item ingotTin;
+	public static Item ingotChrome;
+	public static Item ingotZinc;
+	
 	
 	public static Item gemRuby;
+	public static Item gemSapphire;
 	
 	public static void init() 
 	    {
@@ -32,6 +38,11 @@ public class Items
 		ingotRuby = (new IngotRuby(tmt.ingotRubyID));
 		ingotTitanium = (new IngotTitanium(tmt.ingotTitaniumID));
 		ingotCopper = (new IngotCopper(tmt.ingotCopperID));
+		gemSapphire = (new GemSapphire(tmt.gemSapphireID));
+		ingotSapphire = (new IngotSapphire(tmt.ingotSapphireID));
+		ingotTin = (new IngotTin(tmt.ingotTinID));
+		ingotChrome = (new IngotChrome(tmt.ingotChromeID));
+		ingotZinc = (new IngotZinc(tmt.ingotZincID));
 		
 		gemRuby = (new GemRuby(tmt.gemRubyID));
 		
@@ -45,6 +56,11 @@ public class Items
 		LanguageRegistry.addName(ingotTitanium, Names.ingotTitanium_Name);
 		LanguageRegistry.addName(gemRuby, Names.gemRuby_Name);
 		LanguageRegistry.addName(ingotCopper, Names.ignotCopper_Name);
+		LanguageRegistry.addName(gemSapphire, Names.gemSapphire_Name);
+		LanguageRegistry.addName(ingotSapphire, Names.ingotSapphire_Name);
+		LanguageRegistry.addName(ingotTin, Names.ingotTin_Name);
+		LanguageRegistry.addName(ingotChrome, Names.ingotChrome_Name);
+		LanguageRegistry.addName(ingotZinc, Names.ingotZinc_Name);
 		
 	    }
 	
@@ -56,6 +72,14 @@ public class Items
             OreDictionary.registerOre("ingotTitanium", new ItemStack(ingotTitanium));
             OreDictionary.registerOre("gemRuby", new ItemStack(gemRuby));
             OreDictionary.registerOre("ingotCopper", new ItemStack(ingotCopper));
+            OreDictionary.registerOre("gemSapphire", new ItemStack(gemSapphire));
+            OreDictionary.registerOre("ingotSapphire", new ItemStack(ingotSapphire));
+            OreDictionary.registerOre("ingotTin", new ItemStack(ingotTin));
+            OreDictionary.registerOre("ingotChrome", new ItemStack(ingotChrome));
+            OreDictionary.registerOre("ingotZinc", new ItemStack(ingotZinc));
+
+            
+
             
         }
 }

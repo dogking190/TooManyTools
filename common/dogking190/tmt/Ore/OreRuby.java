@@ -8,8 +8,12 @@
  */
 package dogking190.tmt.Ore;
 
+import java.util.Random;
+
 import dogking190.lib.Modinfo;
 import dogking190.lib.Names;
+import dogking190.tmt.tmt;
+import dogking190.tmt.items.Items;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -23,9 +27,13 @@ public class OreRuby extends Block{
 		setResistance(6.0F);
 		setStepSound(Block.soundStoneFootstep);
 		this.setUnlocalizedName(Names.oreRuby_UnloclalizedName);
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(tmt.tabTooManytools);
 		this.func_111022_d(Modinfo.ID.toLowerCase() +":" + Names.oreRuby_UnloclalizedName);
 
 	}
+	
+	public int idDropped(int par1, Random random, int zero) {
+        return Items.gemRuby.itemID;
+}
 
 }

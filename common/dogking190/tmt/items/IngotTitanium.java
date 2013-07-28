@@ -12,6 +12,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import dogking190.lib.Modinfo;
 import dogking190.lib.Names;
+import dogking190.tmt.tmt;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -24,7 +25,7 @@ public class IngotTitanium extends Item
             super(par1);
             
             this.setUnlocalizedName(Names.ingotTitanium_UnlocalizedName);
-            this.setCreativeTab(CreativeTabs.tabMisc);
+            this.setCreativeTab(tmt.tabTooManytools);
         }
     
     @SideOnly(Side.CLIENT)
