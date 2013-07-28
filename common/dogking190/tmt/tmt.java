@@ -316,6 +316,41 @@ public class tmt {
             GameRegistry.addRecipe(new ShapedOreRecipe(Tools.hoeTitanium, true, new Object[]{"FF "," S "," S ", Character.valueOf('F'), "ingotTitanium", Character.valueOf('S'),Item.stick}));
             GameRegistry.addRecipe(new ShapedOreRecipe(Tools.axeTitanium, true, new Object[]{" FF"," SF"," S ", Character.valueOf('F'), "ingotTitanium", Character.valueOf('S'),Item.stick}));
             
+            /** Ruby Tools */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.swordRuby, true, new Object[]{" F "," F "," S ", Character.valueOf('F'), "gemRuby", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.pickaxeRuby, true, new Object[]{"FFF"," S "," S ", Character.valueOf('F'), "gemRuby", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.spadeRuby, true, new Object[]{" F "," S "," S ", Character.valueOf('F'), "gemRuby", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.hoeRuby, true, new Object[]{"FF "," S "," S ", Character.valueOf('F'), "gemRuby", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.axeRuby, true, new Object[]{" FF"," SF"," S ", Character.valueOf('F'), "gemRuby", Character.valueOf('S'),Item.stick}));
+            
+            /** Copper Tools */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.swordCopper, true, new Object[]{" F "," F "," S ", Character.valueOf('F'), "ingotCopper", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.pickaxeCopper, true, new Object[]{"FFF"," S "," S ", Character.valueOf('F'), "ingotCopper", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.spadeCopper, true, new Object[]{" F "," S "," S ", Character.valueOf('F'), "ingotCopper", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.hoeCopper, true, new Object[]{"FF "," S "," S ", Character.valueOf('F'), "ingotCopper", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.axeCopper, true, new Object[]{" FF"," SF"," S ", Character.valueOf('F'), "ingotCopper", Character.valueOf('S'),Item.stick}));
+            
+            /** Tin Tools */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.swordTin, true, new Object[]{" F "," F "," S ", Character.valueOf('F'), "ingotTin", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.pickaxeTin, true, new Object[]{"FFF"," S "," S ", Character.valueOf('F'), "ingotTin", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.spadeTin, true, new Object[]{" F "," S "," S ", Character.valueOf('F'), "ingotTin", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.hoeTin, true, new Object[]{"FF "," S "," S ", Character.valueOf('F'), "ingotTin", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.axeTin, true, new Object[]{" FF"," SF"," S ", Character.valueOf('F'), "ingotTin", Character.valueOf('S'),Item.stick}));
+            
+            /** Zinc Tools */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.swordZinc, true, new Object[]{" F "," F "," S ", Character.valueOf('F'), "ingotZinc", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.pickaxeZinc, true, new Object[]{"FFF"," S "," S ", Character.valueOf('F'), "ingotZinc", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.spadeZinc, true, new Object[]{" F "," S "," S ", Character.valueOf('F'), "ingotZinc", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.hoeZinc, true, new Object[]{"FF "," S "," S ", Character.valueOf('F'), "ingotZinc", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.axeZinc, true, new Object[]{" FF"," SF"," S ", Character.valueOf('F'), "ingotZinc", Character.valueOf('S'),Item.stick}));
+            
+            /** Chrome Tools */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.swordChrome, true, new Object[]{" F "," F "," S ", Character.valueOf('F'), "ingotChrome", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.pickaxeChrome, true, new Object[]{"FFF"," S "," S ", Character.valueOf('F'), "ingotChrome", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.spadeChrome, true, new Object[]{" F "," S "," S ", Character.valueOf('F'), "ingotChrome", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.hoeChrome, true, new Object[]{"FF "," S "," S ", Character.valueOf('F'), "ingotChrome", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.axeChrome, true, new Object[]{" FF"," SF"," S ", Character.valueOf('F'), "ingotChrome", Character.valueOf('S'),Item.stick}));
+            
         }
 
 
