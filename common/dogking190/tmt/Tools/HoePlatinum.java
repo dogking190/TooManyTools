@@ -24,7 +24,7 @@ public class HoePlatinum extends ItemHoe
         {
             super(par1, par2EnumToolMaterial);
             this.setCreativeTab(tmt.tabTooManytools);
-            this.setUnlocalizedName(Names.spadePlatinum_UnlocalizedName);
+            this.setUnlocalizedName(Names.hoePlatinum_UnlocalizedName);
         }
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister icon) {

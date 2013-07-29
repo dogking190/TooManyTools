@@ -24,7 +24,7 @@ public class AxeTitanium extends ItemAxe
         {
             super(par1, par2EnumToolMaterial);
             this.setCreativeTab(tmt.tabTooManytools);
-            this.setUnlocalizedName(Names.axePlatinum_UnlocalizedName);
+            this.setUnlocalizedName(Names.axeTitanium_UnlocalizedName);
         }
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister icon) {
