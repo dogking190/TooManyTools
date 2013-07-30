@@ -201,4 +201,32 @@ public class Names {
 	public static final String blockPlatinum_UnlocalizedName = "blockPlatinum";
 	public static final String blockPlatinum_Name = "Platinum Block";
 
+    /** Ruby Armor */
+	public static final String rubyHelment_UnlocalizedName = "rubyHelment";
+	public static final String rubyHelment_Name = "Ruby Helemnt";
+	
+	public static final String rubyChestplate_UnlocalizedName = "rubyChestplate";
+    public static final String rubyChestplate_Name = "Ruby Chestplate";
+    
+    public static final String rubyLeggings_UnlocalizedName = "rubyLeggings";
+    public static final String rubyLeggings_Name = "Ruby Leggings";
+    
+    public static final String rubyBoots_UnlocalizedName = "rubyBoots";
+    public static final String rubyBoots_Name = "Ruby Boots";
+    
+    /** Sapphire Armor */
+    public static final String sapphireHelment_UnlocalizedName = "sapphireHelment";
+    public static final String sapphireHelment_Name = "Sapphire Helemnt";
+    
+    public static final String sapphireChestplate_UnlocalizedName = "sapphireChestplate";
+    public static final String sapphireChestplate_Name = "Sapphire Chestplate";
+    
+    public static final String sapphireLeggings_UnlocalizedName = "sapphireLeggings";
+    public static final String sapphireLeggings_Name = "Sapphire Leggings";
+    
+    public static final String sapphireBoots_UnlocalizedName = "sapphireBoots";
+    public static final String sapphireBoots_Name = "Sapphire Boots";
+	
+	
+
 }

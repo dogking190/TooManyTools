@@ -8,15 +8,10 @@
  */
 package dogking190.tmt;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
-import net.minecraftforge.common.EnumHelper;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -29,25 +24,28 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import dogking190.lib.Modinfo;
+import dogking190.lib.PacketHandler;
+import dogking190.tmt.Armor.Armory;
 import dogking190.tmt.Blocks.Blocks;
 import dogking190.tmt.Ore.BlocksOre;
-import dogking190.tmt.Ore.GenericOre;
-import dogking190.tmt.Ore.OrePlatinum;
-import dogking190.tmt.Ore.OreRuby;
 import dogking190.tmt.Tools.Tools;
 import dogking190.tmt.items.Items;
 import dogking190.tmt.proxy.CommonProxy;
 
 @Mod(modid= Modinfo.ID, name= Modinfo.Name, version= Modinfo.version)
-@NetworkMod(channels = {Modinfo.Channel}, clientSideRequired=true, serverSideRequired=true)
+@NetworkMod(channels = {Modinfo.Channel}, clientSideRequired=true, serverSideRequired=true, packetHandler = PacketHandler.class)
 
 public class tmt {
 	
     @Instance("tmt")
-    public static tmt instance;
+    public static tmt instance = new tmt();
+    
+
     
     @SidedProxy(clientSide= Modinfo.Proxy_Loc + ".ClientProxy", serverSide= Modinfo.Proxy_Loc + ".CommonProxy")
     public static CommonProxy proxy;
+    
+    
     
   
     
@@ -64,6 +62,8 @@ public class tmt {
     /** Config Blocks */
     public static int blockPlatinumID;
     
+    /** Config Furnaces */
+
     /** Config Items */
     public static int ingotPlatinumID;
     public static int ingotTitaniumID;
@@ -132,6 +132,18 @@ public class tmt {
     public static int axeChromeID;
     public static int spadeChromeID;
     public static int hoeChromeID;
+    
+    /** Config Ruby Armor */
+    public static int RubyHelmentID;
+    public static int RubyChestPlateID;
+    public static int RubyLeggingsID;
+    public static int RubyBootsID;
+    
+    /** Config Sapphire Armor */
+    public static int SapphireHelmentID;
+    public static int SapphireChestPlateID;
+    public static int SapphireLeggingsID;
+    public static int SapphireBootsID;
     
     /** Creative Tab Var */
     public static CreativeTabs tabTooManytools = new tabTooManyTools(CreativeTabs.getNextID(), "TooManyTools");
@@ -228,6 +240,19 @@ public class tmt {
     	/** Blocks ID*/
     	blockPlatinumID = config.getBlock("Platinum Block", 4000).getInt();
     	
+    	/** Ruby Armor ID */
+    	RubyHelmentID = config.getItem("Ruby Helment", 8000).getInt();
+    	RubyChestPlateID = config.getItem("Ruby ChestPlate", 8001).getInt();
+    	RubyLeggingsID = config.getItem("Ruby Leggings", 8002).getInt();
+    	RubyBootsID = config.getItem("Ruby Boots", 8003).getInt();
+    	
+    	/** Sapphire Armor ID */
+    	SapphireHelmentID = config.getItem("Sapphire Helment", 8004).getInt();
+    	SapphireChestPlateID = config.getItem("Sapphire ChestPlate", 8005).getInt();
+    	SapphireLeggingsID = config.getItem("Sapphire Leggings", 8006).getInt();
+    	SapphireBootsID = config.getItem("Sapphire Boots", 8007).getInt();
+    	
+    	
     	config.save();
     
 
@@ -255,12 +280,22 @@ public class tmt {
     	BlocksOre.init();
     	BlocksOre.addNames();
     	
+    	Armory.init();
+    	Armory.addNames();
+    	
     	addRecipe();
+    	addSmelting();
     	
     	  	
 
     	/** World Gen Registry */
     	GameRegistry.registerWorldGenerator(new tmtWorldGen()); 
+    	
+    	/** Tile Registry */
+   
+    	
+    	/** Network Registry */
+
     	
     	/** My Custom Tabs*/
     	LanguageRegistry.instance().addStringLocalization("itemGroup.tabTooManyTools", "en_US", "Too Many Tools");
@@ -287,6 +322,27 @@ public class tmt {
 
 
 
+    private void addSmelting()
+        {
+            
+            
+            /** Smelting Blocks */
+            GameRegistry.addSmelting(BlocksOre.orePlatinum.blockID, new ItemStack(Items.ingotPlatinum, 1), 0.2F);
+            GameRegistry.addSmelting(BlocksOre.genericOre.blockID, new ItemStack(Items.ingotTitanium, 1), 0.2F);
+            GameRegistry.addSmelting(BlocksOre.oreCopper.blockID, new ItemStack(Items.ingotCopper, 1), 0.2F);
+            GameRegistry.addSmelting(BlocksOre.oreTin.blockID, new ItemStack(Items.ingotTin, 1), 0.2F);
+            GameRegistry.addSmelting(BlocksOre.oreChrome.blockID, new ItemStack(Items.ingotChrome, 1), 0.2F);
+            GameRegistry.addSmelting(BlocksOre.oreZinc.blockID, new ItemStack(Items.ingotZinc, 1), 0.2F);
+            
+            /** Smelting Items */
+            GameRegistry.addSmelting(Items.gemSapphire.itemID, new ItemStack(Items.ingotSapphire, 1), 0.2F);
+            GameRegistry.addSmelting(Items.gemRuby.itemID, new ItemStack(Items.ingotRuby, 1), 0.2F);
+
+            
+        }
+
+
+
     private void addRecipe()
         {
             /** Blocks */
@@ -303,11 +359,11 @@ public class tmt {
             GameRegistry.addRecipe(new ShapedOreRecipe(Tools.axePlatinum, true, new Object[]{" FF"," SF"," S ", Character.valueOf('F'), "ingotPlatinum", Character.valueOf('S'),Item.stick}));
             
             /** Sapphire Tools */
-            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.swordSapphire, true, new Object[]{" F "," F "," S ", Character.valueOf('F'), "ingotSapphire", Character.valueOf('S'),Item.stick}));
-            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.pickaxeSapphire, true, new Object[]{"FFF"," S "," S ", Character.valueOf('F'), "ingotSapphire", Character.valueOf('S'),Item.stick}));
-            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.spadeSapphire, true, new Object[]{" F "," S "," S ", Character.valueOf('F'), "ingotSapphire", Character.valueOf('S'),Item.stick}));
-            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.hoeSapphire, true, new Object[]{"FF "," S "," S ", Character.valueOf('F'), "ingotSapphire", Character.valueOf('S'),Item.stick}));
-            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.axeSapphire, true, new Object[]{" FF"," SF"," S ", Character.valueOf('F'), "ingotSapphire", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.swordSapphire, true, new Object[]{" F "," F "," S ", Character.valueOf('F'), "gemSapphire", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.pickaxeSapphire, true, new Object[]{"FFF"," S "," S ", Character.valueOf('F'), "gemSapphire", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.spadeSapphire, true, new Object[]{" F "," S "," S ", Character.valueOf('F'), "gemSapphire", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.hoeSapphire, true, new Object[]{"FF "," S "," S ", Character.valueOf('F'), "gemSapphire", Character.valueOf('S'),Item.stick}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Tools.axeSapphire, true, new Object[]{" FF"," SF"," S ", Character.valueOf('F'), "gemSapphire", Character.valueOf('S'),Item.stick}));
             
             /** Titanium Tools */
             GameRegistry.addRecipe(new ShapedOreRecipe(Tools.swordTitanium, true, new Object[]{" F "," F "," S ", Character.valueOf('F'), "ingotTitanium", Character.valueOf('S'),Item.stick}));
@@ -351,17 +407,26 @@ public class tmt {
             GameRegistry.addRecipe(new ShapedOreRecipe(Tools.hoeChrome, true, new Object[]{"FF "," S "," S ", Character.valueOf('F'), "ingotChrome", Character.valueOf('S'),Item.stick}));
             GameRegistry.addRecipe(new ShapedOreRecipe(Tools.axeChrome, true, new Object[]{" FF"," SF"," S ", Character.valueOf('F'), "ingotChrome", Character.valueOf('S'),Item.stick}));
             
+            /** Ruby Armor */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.rubyHelment, true, new Object[]{"FFF","F F","   ", Character.valueOf('F'), "ingotRuby"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.rubyChestPlate, true, new Object[]{"F F","FFF","FFF", Character.valueOf('F'), "ingotRuby"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.rubyLeggings, true, new Object[]{"FFF","F F","F F", Character.valueOf('F'), "ingotRuby"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.rubyBoots, true, new Object[]{"   ","F F","F F", Character.valueOf('F'), "ingotRuby"}));
+            
+            /** Sapphire Armor */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.sapphireHelment, true, new Object[]{"FFF","F F","   ", Character.valueOf('F'), "ingotSapphire"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.sapphireChestPlate, true, new Object[]{"F F","FFF","FFF", Character.valueOf('F'), "ingotSapphire"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.sapphireLeggings, true, new Object[]{"FFF","F F","F F", Character.valueOf('F'), "ingotSapphire"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.sapphireBoots, true, new Object[]{"   ","F F","F F", Character.valueOf('F'), "ingotSapphire"}));
+            
         }
 
 
     @EventHandler
     public void PostInit(FMLPostInitializationEvent event){
-    	
+        
     }
-	
-
-
-   
+    
    	}
 
 
