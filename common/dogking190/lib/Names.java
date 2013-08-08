@@ -226,7 +226,84 @@ public class Names {
     
     public static final String sapphireBoots_UnlocalizedName = "sapphireBoots";
     public static final String sapphireBoots_Name = "Sapphire Boots";
-	
+    
+    /** Zinc Armor */
+    public static final String zincHelment_UnlocalizedName = "zincHelment";
+    public static final String zincHelment_Name = "Zinc Helemnt";
+    
+    public static final String zincChestplate_UnlocalizedName = "zincChestplate";
+    public static final String zincChestplate_Name = "Zinc Chestplate";
+    
+    public static final String zincLeggings_UnlocalizedName = "zincLeggings";
+    public static final String zincLeggings_Name = "Zinc Leggings";
+    
+    public static final String zincBoots_UnlocalizedName = "zincBoots";
+    public static final String zincBoots_Name = "Zinc Boots";
+    
+    /** Tin Armor tin */
+    public static final String tinHelment_UnlocalizedName = "tinHelment";
+    public static final String tinHelment_Name = "Tin Helemnt";
+    
+    public static final String tinChestplate_UnlocalizedName = "tinChestplate";
+    public static final String tinChestplate_Name = "Tin Chestplate";
+    
+    public static final String tinLeggings_UnlocalizedName = "tinLeggings";
+    public static final String tinLeggings_Name = "Tin Leggings";
+    
+    public static final String tinBoots_UnlocalizedName = "tinBoots";
+    public static final String tinBoots_Name = "Tin Boots";
+    
+    /** Platinum Armor platinum */
+    public static final String platinumHelment_UnlocalizedName = "platinumHelment";
+    public static final String platinumHelment_Name = "Platinum Helemnt";
+    
+    public static final String platinumChestplate_UnlocalizedName = "platinumChestplate";
+    public static final String platinumChestplate_Name = "Platinum Chestplate";
+    
+    public static final String platinumLeggings_UnlocalizedName = "platinumLeggings";
+    public static final String platinumLeggings_Name = "Platinum Leggings";
+    
+    public static final String platinumBoots_UnlocalizedName = "platinumBoots";
+    public static final String platinumBoots_Name = "Platinum Boots";
+    
+	/** Copper Armor copper */
+    public static final String copperHelment_UnlocalizedName = "copperHelment";
+    public static final String copperHelment_Name = "Copper Helemnt";
+    
+    public static final String copperChestplate_UnlocalizedName = "copperChestplate";
+    public static final String copperChestplate_Name = "Copper Chestplate";
+    
+    public static final String copperLeggings_UnlocalizedName = "copperLeggings";
+    public static final String copperLeggings_Name = "Copper Leggings";
+    
+    public static final String copperBoots_UnlocalizedName = "copperBoots";
+    public static final String copperBoots_Name = "Copper Boots";
+    
+    /** Chrome Armor chrome */
+    public static final String chromeHelment_UnlocalizedName = "chromeHelment";
+    public static final String chromeHelment_Name = "Chrome Helemnt";
+    
+    public static final String chromeChestplate_UnlocalizedName = "chromeChestplate";
+    public static final String chromeChestplate_Name = "Chrome Chestplate";
+    
+    public static final String chromeLeggings_UnlocalizedName = "chromeLeggings";
+    public static final String chromeLeggings_Name = "Chrome Leggings";
+    
+    public static final String chromeBoots_UnlocalizedName = "chromeBoots";
+    public static final String chromeBoots_Name = "Chrome Boots";
+    
+    /** Titanium Armor titanium */
+    public static final String titaniumHelment_UnlocalizedName = "titaniumHelment";
+    public static final String titaniumHelment_Name = "Titanium Helemnt";
+    
+    public static final String titaniumChestplate_UnlocalizedName = "titaniumChestplate";
+    public static final String titaniumChestplate_Name = "Titanium Chestplate";
+    
+    public static final String titaniumLeggings_UnlocalizedName = "titaniumLeggings";
+    public static final String titaniumLeggings_Name = "Titanium Leggings";
+    
+    public static final String titaniumBoots_UnlocalizedName = "titaniumBoots";
+    public static final String titaniumBoots_Name = "Titanium Boots";
 	
 
 }

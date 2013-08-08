@@ -39,16 +39,10 @@ public class tmt {
 	
     @Instance("tmt")
     public static tmt instance = new tmt();
-    
 
-    
     @SidedProxy(clientSide= Modinfo.Proxy_Loc + ".ClientProxy", serverSide= Modinfo.Proxy_Loc + ".CommonProxy")
     public static CommonProxy proxy;
-    
-    
-    
-  
-    
+
     /** Config Ores*/
     public static int genericOreID;
     public static int orePlatinumID;
@@ -62,8 +56,6 @@ public class tmt {
     /** Config Blocks */
     public static int blockPlatinumID;
     
-    /** Config Furnaces */
-
     /** Config Items */
     public static int ingotPlatinumID;
     public static int ingotTitaniumID;
@@ -145,6 +137,42 @@ public class tmt {
     public static int SapphireLeggingsID;
     public static int SapphireBootsID;
     
+    /** Config Zinc Armor */
+    public static int ZincHelmentID;
+    public static int ZincChestPlateID;
+    public static int ZincLeggingsID;
+    public static int ZincBootsID;
+    
+    /** Config Tin Armor */
+    public static int TinHelmentID;
+    public static int TinChestPlateID;
+    public static int TinLeggingsID;
+    public static int TinBootsID;
+    
+    /** Config Platinum Armor */
+    public static int PlatinumHelmentID;
+    public static int PlatinumChestPlateID;
+    public static int PlatinumLeggingsID;
+    public static int PlatinumBootsID;
+    
+    /** Config Copper Armor */
+    public static int CopperHelmentID;
+    public static int CopperChestPlateID;
+    public static int CopperLeggingsID;
+    public static int CopperBootsID;
+    
+    /** Config Chrome Armor */
+    public static int ChromeHelmentID;
+    public static int ChromeChestPlateID;
+    public static int ChromeLeggingsID;
+    public static int ChromeBootsID;
+    
+    /** Config Titanium Armor */
+    public static int TitaniumHelmentID;
+    public static int TitaniumChestPlateID;
+    public static int TitaniumLeggingsID;
+    public static int TitaniumBootsID;
+ 
     /** Creative Tab Var */
     public static CreativeTabs tabTooManytools = new tabTooManyTools(CreativeTabs.getNextID(), "TooManyTools");
      
@@ -252,20 +280,50 @@ public class tmt {
     	SapphireLeggingsID = config.getItem("Sapphire Leggings", 8006).getInt();
     	SapphireBootsID = config.getItem("Sapphire Boots", 8007).getInt();
     	
+    	/** Zinc Armor ID */
+    	ZincHelmentID = config.getItem("Zinc Helment", 8008).getInt();
+        ZincChestPlateID = config.getItem("Zinc ChestPlate", 8009).getInt();
+        ZincLeggingsID = config.getItem("Zinc Leggings", 8010).getInt();
+        ZincBootsID = config.getItem("Zinc Boots", 8011).getInt();
+        
+        /** Tin Armor ID */
+        TinHelmentID = config.getItem("Tin Helment", 8012).getInt();
+        TinChestPlateID = config.getItem("Tin ChestPlate", 8013).getInt();
+        TinLeggingsID = config.getItem("Tin Leggings", 8014).getInt();
+        TinBootsID = config.getItem("Tin Boots", 8015).getInt();
+        
+        /** Platinum Armor ID */ 
+        PlatinumHelmentID = config.getItem("Platinum Helment", 8016).getInt();
+        PlatinumChestPlateID = config.getItem("Platinum ChestPlate", 8017).getInt();
+        PlatinumLeggingsID = config.getItem("Platinum Leggings", 8018).getInt();
+        PlatinumBootsID = config.getItem("Platinum Boots", 8019).getInt();
+        
+        /** Copper Armor ID */
+        CopperHelmentID = config.getItem("Copper Helment", 8020).getInt();
+        CopperChestPlateID = config.getItem("Copper ChestPlate", 8021).getInt();
+        CopperLeggingsID = config.getItem("Copper Leggings", 8022).getInt();
+        CopperBootsID = config.getItem("Copper Boots", 8023).getInt();
+        
+        /** Chrome Armor ID */
+        ChromeHelmentID = config.getItem("Chrome Helment", 8024).getInt();
+        ChromeChestPlateID = config.getItem("Chrome ChestPlate", 8025).getInt();
+        ChromeLeggingsID = config.getItem("Chrome Leggings", 8026).getInt();
+        ChromeBootsID = config.getItem("Chrome Boots", 8027).getInt();
+        
+        /** Titanium Armor ID */
+        TitaniumHelmentID = config.getItem("Titanium Helment", 8024).getInt();
+        TitaniumChestPlateID = config.getItem("Titanium ChestPlate", 8025).getInt();
+        TitaniumLeggingsID = config.getItem("Titanium Leggings", 8026).getInt();
+        TitaniumBootsID = config.getItem("Titanium Boots", 8027).getInt();
     	
     	config.save();
     
-
     }
-    	
-    	
     
     @EventHandler
     public void Init(FMLInitializationEvent event)
         {
-        
-       
-        
+            
     	Items.init();
     	Items.addNames();
     	Items.oreRegistration();
@@ -286,16 +344,8 @@ public class tmt {
     	addRecipe();
     	addSmelting();
     	
-    	  	
-
     	/** World Gen Registry */
     	GameRegistry.registerWorldGenerator(new tmtWorldGen()); 
-    	
-    	/** Tile Registry */
-   
-    	
-    	/** Network Registry */
-
     	
     	/** My Custom Tabs*/
     	LanguageRegistry.instance().addStringLocalization("itemGroup.tabTooManyTools", "en_US", "Too Many Tools");
@@ -313,18 +363,9 @@ public class tmt {
         GameRegistry.addSmelting(Items.gemRuby.itemID, new ItemStack(Items.ingotRuby, 1), 0.2F);
 
         }
-
-
-
-
-
-
-
-
-
+    
     private void addSmelting()
         {
-            
             
             /** Smelting Blocks */
             GameRegistry.addSmelting(BlocksOre.orePlatinum.blockID, new ItemStack(Items.ingotPlatinum, 1), 0.2F);
@@ -338,13 +379,11 @@ public class tmt {
             GameRegistry.addSmelting(Items.gemSapphire.itemID, new ItemStack(Items.ingotSapphire, 1), 0.2F);
             GameRegistry.addSmelting(Items.gemRuby.itemID, new ItemStack(Items.ingotRuby, 1), 0.2F);
 
-            
         }
-
-
 
     private void addRecipe()
         {
+            
             /** Blocks */
             GameRegistry.addRecipe(new ShapedOreRecipe(Blocks.blockPlatinum, true, new Object[]{"FFF","FFF","FFF", Character.valueOf('F'), "ingotPlatinum"}));
             
@@ -419,19 +458,48 @@ public class tmt {
             GameRegistry.addRecipe(new ShapedOreRecipe(Armory.sapphireLeggings, true, new Object[]{"FFF","F F","F F", Character.valueOf('F'), "ingotSapphire"}));
             GameRegistry.addRecipe(new ShapedOreRecipe(Armory.sapphireBoots, true, new Object[]{"   ","F F","F F", Character.valueOf('F'), "ingotSapphire"}));
             
+            /** Zinc Armor */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.zincHelment, true, new Object[]{"FFF","F F","   ", Character.valueOf('F'), "ingotZinc"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.zincChestPlate, true, new Object[]{"F F","FFF","FFF", Character.valueOf('F'), "ingotZinc"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.zincLeggings, true, new Object[]{"FFF","F F","F F", Character.valueOf('F'), "ingotZinc"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.zincBoots, true, new Object[]{"   ","F F","F F", Character.valueOf('F'), "ingotZinc"}));
+            
+            /** Tin Armor */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.tinHelment, true, new Object[]{"FFF","F F","   ", Character.valueOf('F'), "ingotTin"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.tinChestPlate, true, new Object[]{"F F","FFF","FFF", Character.valueOf('F'), "ingotTin"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.tinLeggings, true, new Object[]{"FFF","F F","F F", Character.valueOf('F'), "ingotTin"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.tinBoots, true, new Object[]{"   ","F F","F F", Character.valueOf('F'), "ingotTin"}));
+            
+            /** Platinum Armor */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.platinumHelment, true, new Object[]{"FFF","F F","   ", Character.valueOf('F'), "ingotPlatinum"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.platinumChestPlate, true, new Object[]{"F F","FFF","FFF", Character.valueOf('F'), "ingotPlatinum"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.platinumLeggings, true, new Object[]{"FFF","F F","F F", Character.valueOf('F'), "ingotPlatinum"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.platinumBoots, true, new Object[]{"   ","F F","F F", Character.valueOf('F'), "ingotPlatinum"}));
+            
+            /** Copper Armor */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.copperHelment, true, new Object[]{"FFF","F F","   ", Character.valueOf('F'), "ingotCopper"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.copperChestPlate, true, new Object[]{"F F","FFF","FFF", Character.valueOf('F'), "ingotCopper"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.copperLeggings, true, new Object[]{"FFF","F F","F F", Character.valueOf('F'), "ingotCopper"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.copperBoots, true, new Object[]{"   ","F F","F F", Character.valueOf('F'), "ingotCopper"}));
+            
+            /** Chrome Armor */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.chromeHelment, true, new Object[]{"FFF","F F","   ", Character.valueOf('F'), "ingotChrome"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.chromeChestPlate, true, new Object[]{"F F","FFF","FFF", Character.valueOf('F'), "ingotChrome"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.chromeLeggings, true, new Object[]{"FFF","F F","F F", Character.valueOf('F'), "ingotChrome"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.chromeBoots, true, new Object[]{"   ","F F","F F", Character.valueOf('F'), "ingotChrome"}));
+            
+            /** Titanium Armor */
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.titaniumHelment, true, new Object[]{"FFF","F F","   ", Character.valueOf('F'), "ingotTitanium"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.titaniumChestPlate, true, new Object[]{"F F","FFF","FFF", Character.valueOf('F'), "ingotTitanium"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.titaniumLeggings, true, new Object[]{"FFF","F F","F F", Character.valueOf('F'), "ingotTitanium"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Armory.titaniumBoots, true, new Object[]{"   ","F F","F F", Character.valueOf('F'), "ingotTitanium"}));
+            
         }
-
-
+    
     @EventHandler
-    public void PostInit(FMLPostInitializationEvent event){
+    public void PostInit(FMLPostInitializationEvent event)
+        {
         
-    }
+        }
     
    	}
-
-
-    
-   
-
-
-
